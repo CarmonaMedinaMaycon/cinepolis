@@ -1,0 +1,21 @@
+version: '3'
+services:
+  cine:
+    image: nginx
+    ports:
+      - "8001:80"
+    volumes:
+      - ./cine:/usr/share/nginx/html
+    networks:
+      - cine-net
+  db:
+    image: mysql:8.0.1
+    environment:
+      MYSQL_ROOT_PASSWORD: i20213tn004
+      MYSQL_DATABASE: cines
+      MYSQL_USER: cines
+      MYSQL_PASSWORD: gpds2024
+    ports:
+      - "8003:3306"
+    networks:
+      - cine-net
