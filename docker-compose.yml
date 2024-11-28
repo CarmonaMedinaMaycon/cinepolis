@@ -4,8 +4,6 @@ services:
     image: nginx
     ports:
       - "8001:80"
-    volumes:
-      - ./cine:/usr/share/nginx/html
     networks:
       - cine-front
   db:
