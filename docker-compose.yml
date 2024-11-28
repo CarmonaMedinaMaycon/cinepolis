@@ -7,7 +7,7 @@ services:
     volumes:
       - ./cine:/usr/share/nginx/html
     networks:
-      - cine-net
+      - cine-front
   db:
     image: mysql:8.0.1
     environment:
